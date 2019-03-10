@@ -1,7 +1,8 @@
+import { inject } from '@ember/service';
 import Route from '@ember/routing/route';
 
 export default Route.extend({
-  favourites: Ember.inject.service(),
+  favourites: inject(),
   actions: {
     favouriteClicked(org) {
       this.get('favourites').favouriteItem(org);
