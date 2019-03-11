@@ -1,7 +1,8 @@
 <ul>
-  <li>{{link-to "react" "org.repo.issues" "react"}}</li>
-  <li>{{link-to "react" "org.repo.issues" "react"}}</li>
-  <li>{{link-to "react" "org.repo.issues" "react"}}</li>
+  {{log model}}
+  {{#each model as |repo|}}
+    <li>[ Favourite ] {{link-to repo.name 'org.repo.issues' repo.name}}</li>
+  {{/each}}
 </ul>
 
 {{outlet}}
